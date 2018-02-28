@@ -1,0 +1,35 @@
+#promo-card {
+  .wrapper {
+    @include wrapper($wrapper-width);
+    padding-top: 30px;
+    .promo-card-container {
+      background-color: $primary-color;
+      box-shadow: 4px 4px 10px $accent-color;
+      position: absolute;
+      width: 100%;
+      .promo-image-container {
+        width: 50%;
+        float: left;
+        .promo-image {
+          @include promo-image($background-image-color, './img/our-school-photo.jpg');
+        }
+      }
+      .promo-text-container {
+        width: 50%;
+        float: left;
+        .promo-text-wrapper {
+          padding: 30px;
+          .promo-heading {
+            @include H4(left, $white);
+          }
+          .promo-description {
+            @include P(left, $white);
+          }
+        }
+      }
+    }
+  }
+  .clear {
+    clear: both;
+  }
+}

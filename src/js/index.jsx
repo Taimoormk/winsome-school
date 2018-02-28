@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 // ########## Import Screens Here ##########
 
 // ########## Import Components Here ##########
-import App from './app';
+import App from './components/app';
 
 ReactDOM.render(
   <App />,
