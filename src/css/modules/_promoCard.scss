@@ -1,16 +1,17 @@
 #promo-card {
+  margin-bottom: 420px;
   .wrapper {
     @include wrapper($wrapper-width);
     padding-top: 30px;
-    .promo-card-container {
+    .promo-card-container-left {
       background-color: $primary-color;
       box-shadow: 4px 4px 10px $accent-color;
       position: absolute;
       width: 100%;
-      .promo-image-container {
+      .promo-image-container-left {
         width: 50%;
         float: left;
-        .promo-image {
+        .promo-image-left {
           @include promo-image($background-image-color, './img/our-school-photo.jpg');
         }
       }
@@ -19,10 +20,88 @@
         float: left;
         .promo-text-wrapper {
           padding: 30px;
-          .promo-heading {
+          .promo-heading-right {
             @include H4(left, $white);
           }
-          .promo-description {
+          .promo-description-right {
+            @include P(left, $white);
+          }
+        }
+      }
+    }
+    .promo-card-container-right {
+      background-color: $primary-color;
+      box-shadow: -4px -4px 10px $accent-color;
+      position: absolute;
+      width: 100%;
+      .promo-image-container-right {
+        width: 50%;
+        float: right;
+        .promo-image-right {
+          @include promo-image($background-image-color, './img/reggio-emilia-photo.jpg');
+        }
+      }
+      .promo-text-container {
+        width: 50%;
+        float: right;
+        .promo-text-wrapper {
+          padding: 30px;
+          .promo-heading-left {
+            @include H4(left, $white);
+          }
+          .promo-description-left {
+            @include P(left, $white);
+          }
+        }
+      }
+    }
+    .promo-card-container-sectionTwo-left {
+      background-color: $primary-color;
+      box-shadow: 4px 4px 10px $accent-color;
+      position: absolute;
+      width: 100%;
+      .promo-image-container-sectionTwo-left {
+        width: 50%;
+        float: left;
+        .promo-image-sectionTwo-left {
+          @include promo-image($background-image-color, './img/middle-school-photo.jpg');
+        }
+      }
+      .promo-text-container {
+        width: 50%;
+        float: left;
+        .promo-text-wrapper {
+          padding: 30px;
+          .promo-heading-sectionTwo-right {
+            @include H4(left, $white);
+          }
+          .promo-description-sectionTwo-right {
+            @include P(left, $white);
+          }
+        }
+      }
+    }
+    .promo-card-container-sectionTwo-right {
+      background-color: $primary-color;
+      box-shadow: -4px -4px 10px $accent-color;
+      position: absolute;
+      width: 100%;
+      .promo-image-container-sectionTwo-right {
+        width: 50%;
+        float: right;
+        .promo-image-sectionTwo-right {
+          @include promo-image($background-image-color, './img/senior-school-photo.jpg');
+        }
+      }
+      .promo-text-container {
+        width: 50%;
+        float: right;
+        .promo-text-wrapper {
+          padding: 30px;
+          .promo-heading-sectionTwo-left {
+            @include H4(left, $white);
+          }
+          .promo-description-sectionTwo-left {
             @include P(left, $white);
           }
         }

@@ -9,18 +9,20 @@ import ReadMoreButton from './ReadMoreButton';
 
 export default class PromoCard extends Component {
   render() {
+    let { sectionTwo } = this.props;
+    console.log('lets see', this.props);
     return (
       <div id="promo-card">
         <div className="wrapper">
-          <div className="promo-card-container">
-            <div className="promo-image-container">
-              <div className="promo-image">
+          <div className={`promo-card-container-${sectionTwo ? "sectionTwo-" : ""}${this.props.imageDirection}`}>
+            <div className={`promo-image-container-${sectionTwo ? "sectionTwo-" : ""}${this.props.imageDirection}`}>
+              <div className={`promo-image-${sectionTwo ? "sectionTwo-" : ""}${this.props.imageDirection}`}>
               </div>
             </div>
             <div className="promo-text-container">
               <div className="promo-text-wrapper">
-                <h4 className="promo-heading">Our School</h4>
-                <p className="promo-description">We would like to extend a warm welcome to Winsome School System and take a few moments to share our vision with you. We are a healthy, thriving educational community catering to students in Childcare through to Year 10.The school has enjoyed a strong academic achievement record, and an engaging, varied curriculum. The school’s co-curricular activities and unique programs all reinforce our desire to develop the whole child.</p>
+                <h4 className={`promo-heading-${sectionTwo ? "sectionTwo-" : ""}${this.props.textDirection}`}>{this.props.title}</h4>
+                <p className={`promo-description-${sectionTwo ? "sectionTwo-" : ""}${this.props.textDirection}`}>{this.props.description}</p>
                 <ReadMoreButton />
               </div>
             </div>
