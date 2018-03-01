@@ -15,9 +15,9 @@ export default class JuniorSchool extends Component {
           <div className="wrapper">
             <h4 className="junior-school-heading">Junior School</h4>
             <p className="junior-school-description">At Winsome we believe in providing a dual approach to education which supports every child to become confident learners. For us, the quality of relationship developed with the child has a direct link to the effective practice of teaching the children and guiding them to discover new things and think for themselves. We believe that if the teacher-child relationship is based on mutual respect, active listening and the sharing of knowledge and skills, the child’s capacity to learn and discover the world is enhanced.</p>
-            <div className="read-more">
+            {/* <div className="read-more"> */}
               <ReadMoreButton />
-            </div>
+            {/* </div> */}
           </div>
         </div>
         <div className="bottom-section">

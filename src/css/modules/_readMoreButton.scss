@@ -1,4 +1,7 @@
 #read-more-button {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
   .read-more-button {
     @include read-more-button();
     .read-more-button-text {

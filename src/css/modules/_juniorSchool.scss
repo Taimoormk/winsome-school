@@ -15,7 +15,8 @@
         @include P(center, $black);
       }
       .read-more {
-        margin: 0px auto;
+        display: inline-block;
+        align-self: center;
       }
     }
   }

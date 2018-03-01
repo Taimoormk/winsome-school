@@ -70,7 +70,7 @@ export default class WinsomeSchool extends Component {
     let { sectionTwo } = this.props;
     return (
       <section id="winsome-school">
-        <h2 className="winsome-school-heading">Winsome Radical School</h2>
+        <h2 className="winsome-school-heading">{sectionTwo ? "..." : "Winsome Radical School"}</h2>
         {sectionTwo ? this.renderPromoCardsSectionTwo() : this.renderPromoCards()}
       </section>
     );
