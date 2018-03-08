@@ -8,13 +8,13 @@ import PropTypes from 'prop-types';
 
 export default class ReadMoreButton extends Component {
   render() {
+    let { align } = this.props;
+    console.log(align)
     return (
-      <div id="read-more-button">
-        <div className="read-more-button">
-          <p className="read-more-button-text">
-            Read More
-          </p>
-        </div>
+      <div className={`read-more-button-${align}`}>
+        <p className="read-more-button-text">
+          Read More
+        </p>
       </div>
     );
   }

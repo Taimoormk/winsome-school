@@ -13,6 +13,8 @@
       }
       .junior-school-description {
         @include P(center, $black);
+        margin-bottom: 30px;
+        margin-top: 30px;
       }
       .read-more {
         display: inline-block;

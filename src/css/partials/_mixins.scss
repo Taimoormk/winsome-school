@@ -6,14 +6,21 @@
   width: $w;
 }
 
-@mixin read-more-button() {
+@mixin read-more-button-left() {
   width: 150px;
   height: 50px;
   background-color: $secondary-color;
   border-radius: 7px;
   box-shadow: 4px 4px 10px $accent-color;
-  margin-top: 15px;
-  display: inline-block;
+}
+
+@mixin read-more-button-center() {
+  width: 150px;
+  height: 50px;
+  background-color: $secondary-color;
+  border-radius: 7px;
+  box-shadow: 4px 4px 10px $accent-color;
+  margin: 0 auto;
 }
 
 @mixin promo-image-conatainer-sectionOne-left() {
@@ -43,10 +50,12 @@
 
 @mixin promo-heading() {
   @include H4(left, $white);
+  padding-bottom: 20px;
 }
 
 @mixin promo-description() {
   @include P(left, $white);
+  padding-bottom: 20px;
 }
 
 // ########## All Text Mixins Here ##########
@@ -85,7 +94,6 @@
   font-weight: 200;
   font-size: 14px;
   margin: 0px;
-  padding-top: 15px;
   line-height: 22px;
   text-align: $t-a;
   color: $c;
