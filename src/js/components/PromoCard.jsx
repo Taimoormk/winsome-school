@@ -9,20 +9,20 @@ import ReadMoreButton from './ReadMoreButton';
 
 export default class PromoCard extends Component {
   render() {
-    let { sectionTwo } = this.props;
+    let { sectionTwo, data } = this.props;
     console.log('lets see', this.props);
     return (
       <div id="promo-card">
         <div className="wrapper">
-          <div className={`promo-card-container-${sectionTwo ? "sectionTwo-" : ""}${this.props.imageDirection}`}>
-            <div className={`promo-image-container-${sectionTwo ? "sectionTwo-" : ""}${this.props.imageDirection}`}>
-              <div className={`promo-image-${sectionTwo ? "sectionTwo-" : ""}${this.props.imageDirection}`}>
+          <div className={`promo-card-container-${data.id > 2 && "sectionTwo-" || data.id <= 2 && "sectionOne-"}${data.imageDirection}`}>
+            <div className={`promo-image-container-${data.id > 2 && "sectionTwo-" || data.id <= 2 && "sectionOne-"}${data.imageDirection}`}>
+              <div className={`promo-image-${data.id > 2 && "sectionTwo-" || data.id <= 2 && "sectionOne-"}${data.imageDirection}`}>
               </div>
             </div>
             <div className="promo-text-container">
               <div className="promo-text-wrapper">
-                <h4 className={`promo-heading-${sectionTwo ? "sectionTwo-" : ""}${this.props.textDirection}`}>{this.props.title}</h4>
-                <p className={`promo-description-${sectionTwo ? "sectionTwo-" : ""}${this.props.textDirection}`}>{this.props.description}</p>
+                <h4 className="promo-heading">{data.title}</h4>
+                <p className="promo-description">{data.description}</p>
                 <ReadMoreButton />
               </div>
             </div>

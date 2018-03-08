@@ -16,6 +16,39 @@
   display: inline-block;
 }
 
+@mixin promo-image-conatainer-sectionOne-left() {
+  width: 50%;
+  float: left;
+}
+
+@mixin promo-image-conatainer-sectionTwo-left() {
+  width: 50%;
+  float: left;
+}
+
+@mixin promo-image-conatainer-sectionOne-right() {
+  width: 50%;
+  float: right;
+}
+
+@mixin promo-image-conatainer-sectionTwo-right() {
+  width: 50%;
+  float: right;
+}
+
+@mixin promo-text-container() {
+  width: 50%;
+  float: left;
+}
+
+@mixin promo-heading() {
+  @include H4(left, $white);
+}
+
+@mixin promo-description() {
+  @include P(left, $white);
+}
+
 // ########## All Text Mixins Here ##########
 @mixin H2($t-a, $c) {
   font-family: $font-family;

@@ -3,106 +3,98 @@
   .wrapper {
     @include wrapper($wrapper-width);
     padding-top: 30px;
-    .promo-card-container-left {
+    .promo-card-container-sectionOne-left {
       background-color: $primary-color;
-      box-shadow: 4px 4px 10px $accent-color;
       position: absolute;
       width: 100%;
-      .promo-image-container-left {
-        width: 50%;
-        float: left;
-        .promo-image-left {
-          @include promo-image($background-image-color, './img/our-school-photo.jpg');
+      box-shadow: 4px 4px 10px $accent-color;
+      .promo-image-container-sectionOne-left {
+        @include promo-image-conatainer-sectionOne-left();
+        .promo-image-sectionOne-left {
+          @include promo-image($background-image-color, $promo-image-1);
         }
       }
       .promo-text-container {
-        width: 50%;
-        float: left;
+        @include promo-text-container();
         .promo-text-wrapper {
           padding: 30px;
-          .promo-heading-right {
-            @include H4(left, $white);
+          .promo-heading {
+            @include promo-heading();
           }
-          .promo-description-right {
-            @include P(left, $white);
+          .promo-description {
+            @include promo-description();
           }
         }
       }
     }
-    .promo-card-container-right {
+    .promo-card-container-sectionOne-right {
       background-color: $primary-color;
-      box-shadow: -4px -4px 10px $accent-color;
       position: absolute;
       width: 100%;
-      .promo-image-container-right {
-        width: 50%;
-        float: right;
-        .promo-image-right {
-          @include promo-image($background-image-color, './img/reggio-emilia-photo.jpg');
+      box-shadow: -4px -4px 10px $accent-color;
+      .promo-image-container-sectionOne-right {
+        @include promo-image-conatainer-sectionOne-right();
+        .promo-image-sectionOne-right {
+          @include promo-image($background-image-color, $promo-image-2);
         }
       }
       .promo-text-container {
-        width: 50%;
-        float: right;
+        @include promo-text-container();
         .promo-text-wrapper {
           padding: 30px;
-          .promo-heading-left {
-            @include H4(left, $white);
+          .promo-heading {
+            @include promo-heading();
           }
-          .promo-description-left {
-            @include P(left, $white);
+          .promo-description {
+            @include promo-description();
           }
         }
       }
     }
     .promo-card-container-sectionTwo-left {
       background-color: $primary-color;
-      box-shadow: 4px 4px 10px $accent-color;
       position: absolute;
       width: 100%;
+      box-shadow: 4px 4px 10px $accent-color;
       .promo-image-container-sectionTwo-left {
-        width: 50%;
-        float: left;
+        @include promo-image-conatainer-sectionTwo-left();
         .promo-image-sectionTwo-left {
-          @include promo-image($background-image-color, './img/middle-school-photo.jpg');
+          @include promo-image($background-image-color, $promo-image-3);
         }
       }
       .promo-text-container {
-        width: 50%;
-        float: left;
+        @include promo-text-container();
         .promo-text-wrapper {
           padding: 30px;
-          .promo-heading-sectionTwo-right {
-            @include H4(left, $white);
+          .promo-heading {
+            @include promo-heading();
           }
-          .promo-description-sectionTwo-right {
-            @include P(left, $white);
+          .promo-description {
+            @include promo-description();
           }
         }
       }
     }
     .promo-card-container-sectionTwo-right {
       background-color: $primary-color;
-      box-shadow: -4px -4px 10px $accent-color;
       position: absolute;
       width: 100%;
+      box-shadow: -4px -4px 10px $accent-color;
       .promo-image-container-sectionTwo-right {
-        width: 50%;
-        float: right;
+        @include promo-image-conatainer-sectionTwo-right();
         .promo-image-sectionTwo-right {
-          @include promo-image($background-image-color, './img/senior-school-photo.jpg');
+          @include promo-image($background-image-color, $promo-image-4);
         }
       }
       .promo-text-container {
-        width: 50%;
-        float: right;
+        @include promo-text-container();
         .promo-text-wrapper {
           padding: 30px;
-          .promo-heading-sectionTwo-left {
-            @include H4(left, $white);
+          .promo-heading {
+            @include promo-heading();
           }
-          .promo-description-sectionTwo-left {
-            @include P(left, $white);
+          .promo-description {
+            @include promo-description();
           }
         }
       }
