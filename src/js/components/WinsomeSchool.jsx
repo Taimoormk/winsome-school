@@ -44,7 +44,6 @@ export default class WinsomeSchool extends Component {
 
   render() {
     let { sectionTwo } = this.props;
-    console.log('data', data)
     return (
       <section id="winsome-school">
         <h2 className="winsome-school-heading">{!sectionTwo && "Winsome Radical School"}</h2>
