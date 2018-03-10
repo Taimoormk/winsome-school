@@ -6,15 +6,20 @@ import React, { Component } from 'react';
 // ########## Import Components Here ##########
 import WinsomeSchool from './WinsomeSchool';
 import JuniorSchool from './JuniorSchool';
+import { promoData } from './promoData';
 
 export default class App extends Component {
   render() {
     return (
       <div>
-        <WinsomeSchool />
+        <WinsomeSchool 
+          promoData={promoData}
+          id={promoData[0].id}
+        />
         <JuniorSchool />
         <WinsomeSchool 
-          sectionTwo={true}
+          promoData={promoData}
+          id={promoData[1].id}
         />
       </div>
     );

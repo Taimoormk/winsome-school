@@ -9,13 +9,13 @@ import ReadMoreButton from './ReadMoreButton';
 
 export default class PromoCard extends Component {
   render() {
-    let { sectionTwo, data } = this.props;
+    let { data } = this.props;
     return (
       <div className="promo-card">
         <div className="wrapper">
-          <div className={`promo-card-container-${data.id > 2 && "sectionTwo-" || data.id <= 2 && "sectionOne-"}${data.imageDirection}`}>
-            <div className={`promo-image-container-${data.id > 2 && "sectionTwo-" || data.id <= 2 && "sectionOne-"}${data.imageDirection}`}>
-              <div className={`promo-image-${data.id > 2 && "sectionTwo-" || data.id <= 2 && "sectionOne-"}${data.imageDirection}`}>
+          <div className={`promo-card-container-${data.promoCardId > 2 && "sectionTwo-" || data.promoCardId <= 2 && "sectionOne-"}${data.imageDirection}`}>
+            <div className={`promo-image-container-${data.promoCardId > 2 && "sectionTwo-" || data.promoCardId <= 2 && "sectionOne-"}${data.imageDirection}`}>
+              <div className={`promo-image-${data.promoCardId > 2 && "sectionTwo-" || data.promoCardId <= 2 && "sectionOne-"}${data.imageDirection}`}>
               </div>
             </div>
             <div className="promo-text-container">
@@ -35,4 +35,5 @@ export default class PromoCard extends Component {
 }
 
 PromoCard.propTypes = {
+  data: PropTypes.object.isRequired
 }

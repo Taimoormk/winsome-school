@@ -6,52 +6,53 @@ import PropTypes from 'prop-types';
 
 // ########## Import Components Here ##########
 import PromoCard from './PromoCard';
-import { promoData } from './promoData';
 
 export default class WinsomeSchool extends Component {
 
-  renderPromoCards() {
+  renderPromoCardsSectionOne() {
+    let { promoData } = this.props;
     return (
       [
         <PromoCard 
-          data={promoData[0]}
-          key={promoData[0].id}
+          data={promoData[0].promoDataOne}
+          key={promoData[0].promoDataOne.promoCardId}
         />,
         <PromoCard 
-          data={promoData[1]}
-          key={promoData[1].id}
+          data={promoData[0].promoDataTwo}
+          key={promoData[0].promoDataTwo.promoCardId}
         />
       ]
     )
   }
 
   renderPromoCardsSectionTwo() {
+    let { promoData } = this.props;
     return (
       [
         <PromoCard 
-          data={promoData[2]}
-          key={promoData[2].id}
-          {...this.props}
+          data={promoData[1].promoDataThree}
+          key={promoData[1].promoDataThree.promoCardId}
         />,
         <PromoCard 
-          data={promoData[3]}
-          key={promoData[3].id}
-          {...this.props}
+          data={promoData[1].promoDataFour}
+          key={promoData[1].promoDataFour.promoCardId}
         />
       ]
     )
   }
 
   render() {
-    let { sectionTwo } = this.props;
+    let { promoData, id } = this.props;
     return (
       <section id="winsome-school">
-        <h2 className="winsome-school-heading">{!sectionTwo && "Winsome Radical School"}</h2>
-        {sectionTwo ? this.renderPromoCardsSectionTwo() : this.renderPromoCards()}
+        <h2 className="winsome-school-heading">{id === 2 && promoData[1].heading || id === 1 && promoData[0].heading }</h2>
+        {id === 2 && this.renderPromoCardsSectionTwo() || id === 1 && this.renderPromoCardsSectionOne()}
       </section>
     );
   }
 }
 
 WinsomeSchool.propTypes = {
+  promoData: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
 }
