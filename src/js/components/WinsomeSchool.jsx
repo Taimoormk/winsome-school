@@ -45,8 +45,11 @@ export default class WinsomeSchool extends Component {
     let { promoData, id } = this.props;
     return (
       <section id="winsome-school">
-        <h2 className="winsome-school-heading">{id === 2 && promoData[1].heading || id === 1 && promoData[0].heading }</h2>
-        {id === 2 && this.renderPromoCardsSectionTwo() || id === 1 && this.renderPromoCardsSectionOne()}
+        {
+          id === 2 && <div><h2 className="winsome-school-heading">{promoData[1].heading}</h2>{this.renderPromoCardsSectionTwo()}</div>
+          ||
+          id === 1 && <div><h2 className="winsome-school-heading">{promoData[0].heading}</h2>{this.renderPromoCardsSectionOne()}</div>
+        }
       </section>
     );
   }
